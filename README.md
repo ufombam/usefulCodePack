@@ -4,7 +4,7 @@ Contains useful  functions to solve easy day-to-day problems
 You can import any function using ES5 syntax into your script:
 import { add, subtract } from './math_functions.js';
 
-##Usage with HTML <script> tag:
+### Usage with HTML <script> tag:
 <script type="module" src="main.js"></script>
 
 ## detectLonely()
