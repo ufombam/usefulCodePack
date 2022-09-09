@@ -24,3 +24,10 @@ Use this function to find the length of the longest word in a string. Function t
 
 ## capitalizeEachWord()
 Use this function to capitalize every word in a string. This function takes a string as argument.
+
+## mutation()
+Use this function to compare two strings, find if second string in the array match to first string in the array. This function takes an array containing two element(strings)
+
+## chunkArrayInGroups()
+A function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array. Function takes an array as first argument and a number as second argument.
+
