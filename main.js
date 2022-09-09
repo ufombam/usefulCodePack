@@ -260,6 +260,23 @@ function capitalizeEachWord(str) {
 }
 capitalizeEachWord("I'm a little tea pot");
 
+//compare two strings, find if second string match to first string.
+function mutation(arr) {
+    const [a, b] = arr;
+    let checker = [];
+    for (let i = 0; i < b.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            b[i].toLowerCase() == a[j].toLowerCase() && checker.push(i);
+        }
+    }
+    const finalChecked = [...new Set(checker)];
+    return finalChecked.length == b.length;
+}
+
+  //mutation(["voodoo", "no"]);
+
+
+
 export { 
     detectLonely, 
     lookUpProfile, 
@@ -267,5 +284,6 @@ export {
     flipTo32Bits,
     clearWhiteSpace,
     findLongestWordLength,
-    capitalizeEachWord
+    capitalizeEachWord,
+    mutation
 }
