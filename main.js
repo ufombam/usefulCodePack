@@ -285,6 +285,16 @@ let newArray = [];
 }
 //chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3);
 
+//create my own map() function
+Array.prototype.myMap = function(callback) {
+    const newArray = [];
+    // Only change code below this line
+    this.forEach((x,i,array) => newArray.push(callback(x,i,array)));
+    // Only change code above this line
+    return newArray;
+};
+
+
 
 
 export { 
