@@ -305,6 +305,19 @@ Array.prototype.myFilter = function(callback) {
     // Only change code above this line
     return newArray;
 };
+//split a string using spaces and punctuations
+function splitify(str) {
+  // Only change code below this line
+    return str.split(/[^\w\d:]/)
+  // Only change code above this line
+}
+
+//remove special characters from a string and form a sentence
+function sentensify(str) {
+    // Only change code below this line
+    return str.split(/[^\w\d:]/).join(" ");
+    // Only change code above this line
+}
 
 
 
