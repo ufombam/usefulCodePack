@@ -299,12 +299,12 @@ Array.prototype.myFilter = function(callback) {
     const newArray = [];
     // Only change code below this line
     this.forEach((element, i, array) => {
-      if (callback(element, i, array))
+        if (callback(element, i, array))
         newArray.push(element)
     })
     // Only change code above this line
     return newArray;
-  };
+};
 
 
 
