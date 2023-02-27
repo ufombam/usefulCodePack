@@ -328,8 +328,6 @@ function sumAll(arr) {
     return sortedArray.reduce((curr, acc) => curr + acc,0)
 }
 
-sumAll([100, 65]);
-
 
 
 
