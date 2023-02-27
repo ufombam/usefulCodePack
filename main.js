@@ -319,6 +319,17 @@ function sentensify(str) {
     // Only change code above this line
 }
 
+//add all the numbers in the range of numbers supplied
+function sumAll(arr) {
+    const sortedArray = arr.sort((a, b) => a - b);
+    for (let i = sortedArray[0]+1; i < sortedArray[1]; i++) {
+        sortedArray.push(i)
+    }
+    return sortedArray.reduce((curr, acc) => curr + acc,0)
+}
+
+sumAll([100, 65]);
+
 
 
 
@@ -331,5 +342,7 @@ export {
     findLongestWordLength,
     capitalizeEachWord,
     mutation,
-    chunkArrayInGroups
+    chunkArrayInGroups,
+    sentensify,
+
 }
