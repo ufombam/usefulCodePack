@@ -353,5 +353,5 @@ export {
     chunkArrayInGroups,
     sentensify,
     sumAll,
-    
+    diffArray
 }
