@@ -328,7 +328,17 @@ function sumAll(arr) {
     return sortedArray.reduce((curr, acc) => curr + acc,0)
 }
 
-
+//Get the difference between two arrays. (returns only the difference)
+function diffArray(arr1, arr2) {
+    //const newArr = [];
+    const newArr1 = arr1.filter(x => {
+        return arr2.findIndex(element => element == x) < 0
+    })
+    const newArr2 = arr2.filter(x => {
+        return arr1.findIndex(element => element == x) < 0
+    })
+    return newArr2.concat(newArr1)
+}
 
 
 export { 
@@ -342,5 +352,6 @@ export {
     mutation,
     chunkArrayInGroups,
     sentensify,
-
+    sumAll,
+    
 }
