@@ -351,6 +351,7 @@ export {
     capitalizeEachWord,
     mutation,
     chunkArrayInGroups,
+    splitify,
     sentensify,
     sumAll,
     diffArray
