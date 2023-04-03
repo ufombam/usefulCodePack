@@ -350,7 +350,7 @@ function destroyer(arr) {
 //destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
 
-export { 
+module.export = { 
     detectLonely, 
     lookUpProfile, 
     rangeOfNumbers, 
