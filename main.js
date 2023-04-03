@@ -340,6 +340,15 @@ function diffArray(arr1, arr2) {
     return newArr2.concat(newArr1)
 }
 
+//Remove elements from the initial array. First element is the array, the rest args should be removed from the array
+function destroyer(arr) {
+    let [searchArr, ...removeItems] = arguments;
+    const filteredArr = searchArr.filter(x => !removeItems.includes(x))
+    console.log(filteredArr)
+    return filteredArr;
+}
+//destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
 
 export { 
     detectLonely, 
@@ -354,5 +363,6 @@ export {
     splitify,
     sentensify,
     sumAll,
-    diffArray
+    diffArray,
+    destroyer
 }
