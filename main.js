@@ -349,6 +349,15 @@ function destroyer(arr) {
 }
 //destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
+//Searches an array of objects(first arg) to find  and return an array with objects that match the second argument
+function whatIsInAName (collection, source) {
+    const mySourceKeys = Object.keys(source);
+    const myFilter = collection.filter(object => mySourceKeys.every(key => key in object && object[key] === source[key]))
+    console.log(myFilter)
+    return myFilter
+}
+//whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
 
 module.export = { 
     detectLonely, 

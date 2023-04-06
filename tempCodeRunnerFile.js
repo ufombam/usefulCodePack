@@ -1,7 +1,7 @@
-function destroyer(arr) {
-    let [searchArr, ...removeItems] = arguments;
-    const filteredArr = searchArr.filter(x => !removeItems.includes(x))
-    console.log(filteredArr)
-    return filteredArr;
+function whatIsInAName (collection, source) {
+    const mySourceKeys = Object.keys(source);
+    const myFilter = collection.filter(object => mySourceKeys.every(key => key in object && object[key] === source[key]))
+    console.log(myFilter)
+    return myFilter
 }
-destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
