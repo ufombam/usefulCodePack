@@ -368,6 +368,18 @@ function spinalCase(str) {
 }
 //spinalCase('This Is Spinal Tap');
 
+//move words that starts with consonant (clusters) to the end and add 'ay' to the end & add 'way' to the end of words that begin with a vowel
+function translatePigLatin(str) {
+    const vowelRegex = /^[a,e,i,o,u]/gi;
+    const consonantRegex = /^[^a,e,i,o,u]*/gi;
+    if (str.match(vowelRegex)) {
+        return str.concat('way')
+    } else if (str.match(consonantRegex)) {
+        return str.split(consonantRegex).join('').trim().concat(str.match(consonantRegex)).concat('ay')
+    }
+}
+//translatePigLatin("eight"); 
+
 
 module.export = { 
     detectLonely, 
