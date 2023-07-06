@@ -255,7 +255,7 @@ function capitalizeEachWord(str) {
             newStrArray[i][j] = newStrArray[i][j].toLowerCase()
         }
         joinedArray.push(newStrArray[i].join(''))
-    }
+    }zz
     return joinedArray.join(' ')
 }
 capitalizeEachWord("I'm a little tea pot");
@@ -358,6 +358,16 @@ function whatIsInAName (collection, source) {
 }
 //whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 
+//convert to all-lowercase-word joined by a hyphen
+function spinalCase(str) {
+    const myRegex = /(?=[A-Z])|\s|_/g;
+    return str
+        .split(myRegex)
+        .join("-")
+        .toLowerCase();
+}
+//spinalCase('This Is Spinal Tap');
+
 
 module.export = { 
     detectLonely, 
@@ -373,5 +383,6 @@ module.export = {
     sentensify,
     sumAll,
     diffArray,
-    destroyer
+    destroyer,
+    spinalCase
 }
