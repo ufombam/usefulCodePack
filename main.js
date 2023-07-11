@@ -380,6 +380,31 @@ function translatePigLatin(str) {
 }
 //translatePigLatin("eight"); 
 
+//find and replace word in a sentence. Maintain the casing for the replaced word.
+function myReplace(str, before, after) {
+    const myRegex = new RegExp(`${before}`, 'i');
+    //regular expression to match string
+    let myMatch = str.match(myRegex);
+    //check if first character is caps
+    if (myMatch[0].match(/^[A-Z]/)) {
+    //extract first letter from string to check and convert to upper case
+    const firstLetter = after[0][0].toUpperCase();
+    //break-off the first letter in 'after' string
+    const breakWord = after.split(after[0]);
+    let joinedWord = firstLetter.concat(breakWord[1]);
+    return str.replace(before, joinedWord);
+    } else {
+    //extract first letter from string to check and convert to upper case
+    const firstLetter = after[0][0].toLowerCase();
+    //break-off the first letter in 'after' string
+    const breakWord = after.split(after[0]);
+    let joinedWord = firstLetter.concat(breakWord[1]);
+    return str.replace(before, joinedWord);
+    }
+
+}
+//myReplace("He is Sleeping on the couch", "Sleeping", "sitting");
+
 
 module.export = { 
     detectLonely, 
@@ -396,5 +421,6 @@ module.export = {
     sumAll,
     diffArray,
     destroyer,
-    spinalCase
+    spinalCase,
+    myReplace
 }
