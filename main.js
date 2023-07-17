@@ -438,6 +438,12 @@ function fearNotLetter(str) {
 }
 //fearNotLetter("abcdefghijklmnopqrstuvwxyz");
 
+//return union of array from the supplied arrays.
+function uniteUnique(arr) {
+    return [...new Set([...arguments].flat())];
+}
+//uniteUnique([1, 3, 2, 3], [5, 2, 1, 4], [2, 1]);
+
 module.export = { 
     detectLonely, 
     lookUpProfile, 
@@ -455,5 +461,6 @@ module.export = {
     destroyer,
     spinalCase,
     myReplace,
-    pairElement
+    pairElement,
+    uniteUnique
 }
