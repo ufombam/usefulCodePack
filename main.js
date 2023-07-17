@@ -405,6 +405,26 @@ function myReplace(str, before, after) {
 }
 //myReplace("He is Sleeping on the couch", "Sleeping", "sitting");
 
+//return an array containing the missing DNA pair. ATCG
+function pairElement(str) {
+    const missingPair = [...str].map((x) => {
+        switch(x) {
+            case "A":
+                return x.concat("T").split('')
+                break;
+            case "T":
+                return x.concat("A").split('')
+                break;
+            case "G":
+                return x.concat("C").split('')
+                break;
+            default:
+            return x.concat("G").split('')
+        }
+    })
+    return missingPair;
+}
+//pairElement("CTCTA");
 
 module.export = { 
     detectLonely, 
@@ -422,5 +442,6 @@ module.export = {
     diffArray,
     destroyer,
     spinalCase,
-    myReplace
+    myReplace,
+    pairElement
 }
