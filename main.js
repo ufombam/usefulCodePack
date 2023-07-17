@@ -426,6 +426,18 @@ function pairElement(str) {
 }
 //pairElement("CTCTA");
 
+//find the missing letter in the sequence
+function fearNotLetter(str) {
+    let missingLetter;
+    [...str].sort((a,b) => {
+        if (a.charCodeAt(0) !== b.charCodeAt(0)+1) {
+            missingLetter = (String.fromCharCode(a.charCodeAt(0)-1))
+        } 
+    })
+    return missingLetter;
+}
+//fearNotLetter("abcdefghijklmnopqrstuvwxyz");
+
 module.export = { 
     detectLonely, 
     lookUpProfile, 
