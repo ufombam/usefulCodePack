@@ -14,7 +14,7 @@ const detectLonely = (x) => {
     const lonelyOne = Object.keys(arrObj).find(key => arrObj[key] === 1)
     return +lonelyOne;
 }
-//detectLonely(arr);
+//detectLonely(arr);;
 
 
 // Setup
