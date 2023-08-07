@@ -444,6 +444,24 @@ function uniteUnique(arr) {
 }
 //uniteUnique([1, 3, 2, 3], [5, 2, 1, 4], [2, 1]);
 
+//sum all the fibonacci numbers between 0 and number supplied
+function sumFibs(num) {
+    let a = 0;
+    let b = 1;
+    let total = 0;
+
+    while (a <= num) {
+        if (a % 2 === 1) {
+            total += a;
+        }
+        const nextFib = a + b;
+        a = b;
+        b = nextFib;
+    }
+    return total;
+}
+//sumFibs(10);
+
 module.export = { 
     detectLonely, 
     lookUpProfile, 
@@ -462,5 +480,6 @@ module.export = {
     spinalCase,
     myReplace,
     pairElement,
-    uniteUnique
+    uniteUnique,
+    sumFibs
 }
